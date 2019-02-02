@@ -91,6 +91,9 @@ export class MetaSenderComponent implements OnInit {
 
   }
   async update(str){
+    var account = this.web3.eth.accounts.create();
+    console.log(account);
+
     const contract = require('truffle-contract');
     const ss = contract(simplestorage_artifacts);
     ss.setProvider(this.web3.currentProvider);
