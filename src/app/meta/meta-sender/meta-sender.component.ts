@@ -4,13 +4,15 @@ import { MatSnackBar } from '@angular/material';
 import ipfs from '../../ipfs';
 import { Buffer } from 'buffer';
 import { encode } from 'punycode';
+import set = Reflect.set;
 declare let require: any;
 const Web3 = require('web3');
 declare let window: any;
 
 
-const metacoin_artifacts = require('../../../../build/contracts/SimpleStorage.json');
+const metacoin_artifacts = require('../../../../build/contracts/MetaCoin.json');
 const simplestorage_artifacts = require('../../../../build/contracts/SimpleStorage.json');
+const setoken_artifacts = require('../../../../build/contracts/SEToken.json');
 
 @Component({
   selector: 'app-meta-sender',
@@ -18,12 +20,13 @@ const simplestorage_artifacts = require('../../../../build/contracts/SimpleStora
   styleUrls: ['./meta-sender.component.css']
 })
 export class MetaSenderComponent implements OnInit {
-  
+
   accounts: string[];
   MetaCoin: any;
   Storeg: any;
-  web3:any;
+  web3: any;
   simpleStorageInstance: any;
+  setokenInstance: any;
 
   model = {
     amount: 5,
@@ -40,7 +43,7 @@ export class MetaSenderComponent implements OnInit {
       this.bootstrapWeb3();
     });
   }
-  
+
   public bootstrapWeb3() {
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
     if (typeof window.web3 !== 'undefined') {
@@ -55,7 +58,8 @@ export class MetaSenderComponent implements OnInit {
       this.web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
     }
 
-    this.update("ssssfff");
+    this.update('ssssfff');
+    // this.sendInitialToken();
  }
 
   ngOnInit(): void {
@@ -90,8 +94,8 @@ export class MetaSenderComponent implements OnInit {
 
 
   }
-  async update(str){
-    var account = this.web3.eth.accounts.create();
+  async update(str) {
+    const account = this.web3.eth.accounts.create();
     console.log(account);
 
     const contract = require('truffle-contract');
@@ -100,40 +104,65 @@ export class MetaSenderComponent implements OnInit {
 
     this.web3.eth.getAccounts((error, accounts) => {
       ss.deployed().then((instance) => {
-        this.simpleStorageInstance = instance
-        // this.setState({ account: accounts[0] })
-        // Get the value from the contract to prove it worked.
-        // return this.simpleStorageInstance.get.call(accounts[0])
-        console.log(accounts)
-        this.simpleStorageInstance.set('aaaaaaaaa', { from: accounts[0] }).then((r) => {
+        this.simpleStorageInstance = instance;
+        console.log(accounts);
+        this.simpleStorageInstance.addNewUser('#aabbcc', account.address, { from: accounts[0] }).then((r) => {
           // return this.setState({ ipfsHash: result[0].hash })
-          console.log('ifpsHash', r)
-        })
+          console.log('ifpsHash', r);
+        });
         // console.log(instance);
 
-        return this.simpleStorageInstance.get.call().then((ipfsHash) => {
-        // Update state with the result.
-        console.log(ipfsHash)
-      })
-        
+      //   return this.simpleStorageInstance.get.call().then((ipfsHash) => {
+      //   // Update state with the result.
+      //   console.log(ipfsHash);
+      // });
+          this.simpleStorageInstance.getUserByAddress.call('0xD7cE63A99d2BA1f705D6967C917F2b670c9133C5').then((user) => {
+            // Update state with the result.
+            console.log(user);
+        });
       });
-    })
+    });
     // const deployedMetaCoin = await this.MetaCoin.deployed();
     // const transaction = await deployedMetaCoin.sendCoin.sendTransaction(receiver, amount, {from: this.model.account});
   }
 
+  async sendInitialToken() {
+    const account = this.web3.eth.accounts.create();
+    console.log(account);
 
-  onSubmit(event){
+    const contract = require('truffle-contract');
+    const ss = contract(setoken_artifacts);
+    ss.setProvider(this.web3.currentProvider);
+
+    this.web3.eth.getAccounts((error, accounts) => {
+      this.web3.eth.sendTransaction({to: account.address, from: accounts[0], value: 10});
+      // ss.deployed().then((instance) => {
+      //   this.setokenInstance = instance;
+      //   console.log(accounts);
+      //
+      //   this.setokenInstance.transfer(account.address, 10, { from: accounts[0] }).then((r) => {
+      //     // return this.setState({ ipfsHash: result[0].hash })
+      //     console.log('ifpsHash', r);
+      //   }).catch((err) => {
+      //     console.log(err);
+      //   });
+      //
+      // });
+    });
+  }
+
+
+  onSubmit(event) {
     console.log(event);
-    event.preventDefault()
-    const file = event.target.files[0]
+    event.preventDefault();
+    const file = event.target.files[0];
     const reader = new FileReader();
-    reader.readAsArrayBuffer(file)
+    reader.readAsArrayBuffer(file);
     reader.onloadend = (e) => {
      console.log(e);
       // this.setState({ buffer: Buffer(reader.result) })
       // console.log('buffer', this.state.buffer)
-      
+
       // ipfs.files.add(e., (error, result) => {
       //   if(error) {
       //     console.error(error)
@@ -144,27 +173,16 @@ export class MetaSenderComponent implements OnInit {
       //     console.log('ifpsHash', this.state.ipfsHash)
       //   })
       // })
-      this.Storeg.methods.set('sssss').then((r) => {
-        console.log('ifpsHash', r );
-          // return this.setState({ ipfsHash: result[0].hash })
-          // console.log('ifpsHash', this.state.ipfsHash)
-        });
-      
-      // ipfs.files.add(new Buffer(e.target['result']),(err,result)=> {
-      //   if(err) {
-      //     console.log(err)
-      //     return
-      //   }
-      //   console.log(result);
-      //   this.Storeg.methods.set(result[0].hash).then((r) => {
-      //       console.log('ifpsHash', r );
-      //         // return this.setState({ ipfsHash: result[0].hash })
-      //         // console.log('ifpsHash', this.state.ipfsHash)
-      //       });
-      // }).bind(this);
-      
-      console.log('data:image/png;base64,'+ encode(e.target['result']));
-    }
+      ipfs.files.add(new Buffer(e.target['result']), ( err , result ) => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log(result);
+      });
+
+      console.log('data:image/png;base64,' + encode(e.target['result']));
+    };
   }
 
   watchAccount() {
@@ -176,60 +194,6 @@ export class MetaSenderComponent implements OnInit {
   }
 
   setStatus(status) {
-    this.matSnackBar.open(status, null, {duration: 3000});
+    // this.matSnackBar.open(status, null, {duration: 3000});
   }
-
-  // async sendCoin() {
-  //   if (!this.MetaCoin) {
-  //     this.setStatus('Metacoin is not loaded, unable to send transaction');
-  //     return;
-  //   }
-
-  //   const amount = this.model.amount;
-  //   const receiver = this.model.receiver;
-
-  //   console.log('Sending coins' + amount + ' to ' + receiver);
-
-  //   this.setStatus('Initiating transaction... (please wait)');
-  //   try {
-  //     const deployedMetaCoin = await this.MetaCoin.deployed();
-  //     const transaction = await deployedMetaCoin.sendCoin.sendTransaction(receiver, amount, {from: this.model.account});
-
-  //     if (!transaction) {
-  //       this.setStatus('Transaction failed!');
-  //     } else {
-  //       this.setStatus('Transaction complete!');
-  //     }
-  //   } catch (e) {
-  //     console.log(e);
-  //     this.setStatus('Error sending coin; see log.');
-  //   }
-  // }
-
-  // async refreshBalance() {
-  //   console.log('Refreshing balance');
-
-  //   try {
-  //     const deployedMetaCoin = await this.MetaCoin.deployed();
-  //     console.log(deployedMetaCoin);
-  //     console.log('Account', this.model.account);
-  //     const metaCoinBalance = await deployedMetaCoin.getBalance.call(this.model.account);
-  //     console.log('Found balance: ' + metaCoinBalance);
-  //     this.model.balance = metaCoinBalance;
-  //   } catch (e) {
-  //     console.log(e);
-  //     this.setStatus('Error getting balance; see log.');
-  //   }
-  // }
-
-  // setAmount(e) {
-  //   console.log('Setting amount: ' + e.target.value);
-  //   this.model.amount = e.target.value;
-  // }
-
-  // setReceiver(e) {
-  //   console.log('Setting receiver: ' + e.target.value);
-  //   this.model.receiver = e.target.value;
-  // }
-
 }

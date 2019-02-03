@@ -14,10 +14,20 @@ import {
   MatInputModule,
   MatToolbarModule
 } from '@angular/material';
+import { SignupComponent } from './signup/signup.component';
+import {TestcoinModule} from './testcoin/testcoin.module';
+import {RouterModule, Routes} from '@angular/router';
+import {MetaSenderComponent} from './meta/meta-sender/meta-sender.component';
+
+const appRoutes: Routes = [
+  { path: '', component: SignupComponent },
+
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignupComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -30,7 +40,12 @@ import {
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    MetaModule
+    MetaModule,
+    TestcoinModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

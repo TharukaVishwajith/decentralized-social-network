@@ -1,0 +1,50 @@
+<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+  <div class="wrapper wrapper--w780">
+      <div class="card card-3">
+          <div class="card-heading"></div>
+          <div class="card-body" *ngIf="requested">
+              <h2 class="title">Registration Info</h2>
+              <form method="POST">
+                  <div class="input-group">
+                      <input class="input--style-3" type="text" placeholder="Name" name="name"  [(ngModel)]="model.name" >
+                  </div>
+                  <div class="input-group">
+                      <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday" [(ngModel)]="model.age">
+                      <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                  </div>
+                  <div class="input-group" style="width: fit-content">
+                      <div class="rs-select2 js-select-simple select--no-search">
+                          <select name="gender" [(ngModel)]="model.gender">
+                              <option disabled="disabled" selected="selected">Gender</option>
+                              <option>Male</option>
+                              <option>Female</option>
+                              <option>Other</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                      </div>
+                  </div>
+                  <div class="input-group">
+                      <input class="input--style-3" type="email" placeholder="Email" name="email" [(ngModel)]="model.email">
+                  </div>
+                  <div class="input-group">
+                      <input class="input--style-3" type="text" placeholder="Phone" name="phone" [(ngModel)]="model.phone">
+                  </div>
+                  <div class="p-t-10">
+                      <button (click)="signUp()" class="btn btn--pill btn--green" type="submit">Submit</button>
+                  </div>
+              </form>
+          </div>
+        <div class="card-body" *ngIf="!requested && !noAccount">
+          <div class="private-address">Your private address: {{newAccount.privateAddress}}</div>
+          <div class="public-address">Your public address: {{newAccount.publicAddress}}</div>
+          <div class="signup-hint"> Install MetaMask extention in your browser and login yo the account using private address. Then click next</div>
+           <div class="" style="margin-left: 44%;"><img src="../../assets/images/metamask.png" height="60" width="60"></div>
+          <div></div><button (click)="next()" class="btn btn-success next-btn">Next</button>
+        </div>
+        <div class="card-body" *ngIf="noAccount">
+          <div class="public-address">Please request a new account</div>
+          <div></div><button (click)="requestAccount()" class="btn btn-success request-btn">Request Account</button>
+        </div>
+      </div>
+  </div>
+</div>
