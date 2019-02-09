@@ -17,17 +17,18 @@ import {
 import { SignupComponent } from './signup/signup.component';
 import {TestcoinModule} from './testcoin/testcoin.module';
 import {RouterModule, Routes} from '@angular/router';
-import {MetaSenderComponent} from './meta/meta-sender/meta-sender.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   { path: '', component: SignupComponent },
-
+  { path: 'profile', component: ProfileComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserAnimationsModule,

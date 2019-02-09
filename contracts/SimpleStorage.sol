@@ -2,7 +2,7 @@ pragma solidity 0.5.0;
 
 contract SimpleStorage {
 
-  uint256 masterAddress = 0x7CacEE641aa61292c6035906384811186B5F3A2D;
+//  uint256 masterAddress = 0x7CacEE641aa61292c6035906384811186B5F3A2D;
 
   string ipfsHash;
   // Model a Candidate
@@ -40,7 +40,7 @@ contract SimpleStorage {
     return (u.id, u.userIpfsHash);
   }
 
-  function getMasterAddress() public returns (uint256 masterAddress){
-    return masterAddress;
-  }
+//  function getMasterAddress() public returns (uint256 masterAddress){
+//    return masterAddress;
+//  }
 }
