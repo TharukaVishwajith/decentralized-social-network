@@ -6,6 +6,7 @@ import { Buffer } from 'buffer';
 import { encode } from 'punycode';
 import set = Reflect.set;
 import {any} from 'codelyzer/util/function';
+import {Router} from '@angular/router';
 declare let require: any;
 const Web3 = require('web3');
 declare let window: any;
@@ -38,10 +39,11 @@ export class SignupComponent implements OnInit {
     phone: ''
   };
 
-  constructor() {
+  constructor(private router: Router) {
     window.addEventListener('load', (event) => {
       this.bootstrapWeb3();
     });
+    // this.router.navigate(['/profile']);
   }
 
   public bootstrapWeb3() {
@@ -56,6 +58,7 @@ export class SignupComponent implements OnInit {
       this.web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
     }
     // this.signUp('ss');
+    this.navigateToLogedProfile();
   }
 
   ngOnInit() {
@@ -65,6 +68,28 @@ export class SignupComponent implements OnInit {
     //     // this.noAccount = false;
     //   }
     // });
+  }
+  async navigateToLogedProfile() {
+    const contract = require('truffle-contract');
+    const ss = contract(simplestorage_artifacts);
+    ss.setProvider(this.web3.currentProvider);
+
+    this.web3.eth.getAccounts((error, accounts) => {
+      ss.deployed().then((instance) => {
+        this.simpleStorageInstance = instance;
+        console.log(accounts);
+        // this.simpleStorageInstance.addNewUser(ipfsResult.hash, accounts[0], { from: accounts[0] }).then((r) => {
+        //   // return this.setState({ ipfsHash: result[0].hash })
+        //   console.log('ifpsHash', r);
+        // });
+        this.simpleStorageInstance.getUserByAddress.call(accounts[0]).then((user) => {
+          console.log(user);
+          if (user.userIpfsHash !== '' && !user.userIpfsHash !== undefined) {
+           this.router.navigate(['/profile']);
+          }
+        });
+      });
+    });
   }
 
   async requestAccount() {
@@ -103,7 +128,7 @@ export class SignupComponent implements OnInit {
       ss.deployed().then((instance) => {
         this.simpleStorageInstance = instance;
         console.log(accounts);
-        this.simpleStorageInstance.addNewUser(ipfsResult.hash, accounts[0], { from: accounts[0] }).then((r) => {
+        this.simpleStorageInstance.addNewUser(ipfsResult.hash, this.newAccount.publicAddress, { from: accounts[0] }).then((r) => {
           // return this.setState({ ipfsHash: result[0].hash })
           console.log('ifpsHash', r);
         });

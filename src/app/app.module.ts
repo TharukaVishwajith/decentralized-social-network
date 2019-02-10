@@ -18,9 +18,10 @@ import { SignupComponent } from './signup/signup.component';
 import {TestcoinModule} from './testcoin/testcoin.module';
 import {RouterModule, Routes} from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
+import {UserService} from './user.service';
 
 const appRoutes: Routes = [
-  { path: '', component: SignupComponent },
+  { path: 'login', component: SignupComponent },
   { path: 'profile', component: ProfileComponent }
 ];
 
@@ -45,10 +46,10 @@ const appRoutes: Routes = [
     TestcoinModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      // { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
