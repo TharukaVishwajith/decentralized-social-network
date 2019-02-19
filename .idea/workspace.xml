@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4722d5f-fb9b-46fe-ba08-09aab66c2483" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/ConvertLib.json" afterPath="$PROJECT_DIR$/build/contracts/ConvertLib.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/MetaCoin.json" afterPath="$PROJECT_DIR$/build/contracts/MetaCoin.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/SEToken.json" afterPath="$PROJECT_DIR$/build/contracts/SEToken.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/SimpleStorage.json" afterPath="$PROJECT_DIR$/build/contracts/SimpleStorage.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/SimpleStorage.sol" afterPath="$PROJECT_DIR$/contracts/SimpleStorage.sol" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/profile/profile.component.html" afterPath="$PROJECT_DIR$/src/app/profile/profile.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/signup/signup.component.ts" afterPath="$PROJECT_DIR$/src/app/signup/signup.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -265,7 +257,7 @@
       <workItem from="1550312349979" duration="665000" />
       <workItem from="1550322715447" duration="9000" />
       <workItem from="1550509522161" duration="598000" />
-      <workItem from="1550550544959" duration="22058000" />
+      <workItem from="1550550544959" duration="22091000" />
     </task>
     <task id="LOCAL-00001" summary="added profile page">
       <created>1549734797837</created>
@@ -309,11 +301,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549819732249</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added create post">
+      <created>1550599843543</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550599843543</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91739000" />
+    <option name="totallyTimeSpent" value="91772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -353,7 +352,8 @@
     <MESSAGE value="added user service" />
     <MESSAGE value="added profile data load from IPFS" />
     <MESSAGE value="added send post html" />
-    <option name="LAST_COMMIT_MESSAGE" value="added send post html" />
+    <MESSAGE value="added create post" />
+    <option name="LAST_COMMIT_MESSAGE" value="added create post" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
