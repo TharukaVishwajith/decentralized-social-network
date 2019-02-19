@@ -13,9 +13,9 @@
               </button>
             </div>
           </div>
-          <button class="navigation-button btn btn-success">Feed</button>
-          <button class="navigation-button btn btn-success">Friends</button>
-          <button class="navigation-button btn btn-success">Chat</button>
+          <button class="navigation-button btn btn-success" (click)="navigateToTab('FEED')">Feed</button>
+          <button class="navigation-button btn btn-success" (click)="navigateToTab('FRIENDS')">Friends</button>
+          <button class="navigation-button btn btn-success" (click)="navigateToTab('CHAT')">Chat</button>
           <button class="navigation-button btn btn-success edit-profile-btn"> <i class="fa fa-edit"></i></button>
         </div>
         <div class="info-container">
@@ -32,13 +32,26 @@
           </div>
         </div>
         <div class="add-post">
-          <textarea class="add-post-text" placeholder="What do you feel?"></textarea>
-          <input style="left: 436px;" type="file" class="file upload-post-image attache-image">
-          <button class="btn btn-success upload-post-image"> <i class="fa fa-send "></i> </button>
+          <textarea class="add-post-text" placeholder="What do you feel?" [(ngModel)]="post.content"></textarea>
+          <input style="left: 436px;" type="file" class="file upload-post-image attache-image" (change)="onUploadFile($event)">
+          <button class="btn btn-success upload-post-image" (click)="savePost()"> <i class="fa fa-send "></i> </button>
         </div>
         <div class="bottom">
 
         </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="activeTab === 'FEED'">
+    <div *ngFor="let post_ of posts"  class="post-card">
+      <div>
+        <img class="post-card-img" src="https://ipfs.io/ipfs/{{post_.file}}" alt="Avatar">
+      </div>
+      <div class="post-card-container">
+        <h4><b>{{post_.author}}</b></h4>
+        <!--<h4><b>Jane Doe</b></h4>-->
+        <p>{{post_.date.toLocaleDateString()}} {{post_.date.toLocaleTimeString()}} </p>
+        <p>{{post_.content}}</p>
       </div>
     </div>
   </div>

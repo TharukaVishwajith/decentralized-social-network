@@ -11,10 +11,20 @@ contract SimpleStorage {
       string userIpfsHash;
   }
 
+  struct Post{
+    string postIpfsHash;
+    string date;
+    address author;
+  }
+
+  uint public postCount;
+
   // Store Candidates Count
   uint public userCount;
 
   mapping(uint256 => User) public users;
+
+  mapping(uint => Post) public posts;
     // Store Candidates Count
     uint public candidatesCount;
 
@@ -38,6 +48,12 @@ contract SimpleStorage {
     // break the struct's members out into a tuple
     // in the same order that they appear in the struct
     return (u.id, u.userIpfsHash);
+  }
+
+
+  function addNewPost(string memory _postIpfsHash, string memory _date) public{
+    postCount++;
+    posts[postCount] = Post(_postIpfsHash, _date, msg.sender);
   }
 
 //  function getMasterAddress() public returns (uint256 masterAddress){

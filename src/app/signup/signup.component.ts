@@ -128,7 +128,7 @@ export class SignupComponent implements OnInit {
       ss.deployed().then((instance) => {
         this.simpleStorageInstance = instance;
         console.log(accounts);
-        this.simpleStorageInstance.addNewUser(ipfsResult.hash, this.newAccount.publicAddress, { from: accounts[0] }).then((r) => {
+        this.simpleStorageInstance.addNewUser(ipfsResult.hash, accounts[0], { from: accounts[0] }).then((r) => {
           // return this.setState({ ipfsHash: result[0].hash })
           console.log('ifpsHash', r);
         });
