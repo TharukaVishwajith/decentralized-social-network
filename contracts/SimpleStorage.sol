@@ -41,6 +41,10 @@ contract SimpleStorage {
     users[_address] = User(userCount, _userIpfsHash);
   }
 
+  function updateUser(string memory _userIpfsHash, uint256 _address) public{
+    users[_address] = User(userCount, _userIpfsHash);
+  }
+
   function getUserByAddress(uint256 _address) public returns (uint id, string memory userIpfsHash) {
     // copy the data into memory
     User memory u = users[_address];

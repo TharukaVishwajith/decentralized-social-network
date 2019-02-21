@@ -36,7 +36,8 @@ export class SignupComponent implements OnInit {
     age: '',
     gender: '',
     email: '',
-    phone: ''
+    phone: '',
+    profileImageHash: 'NA'
   };
 
   constructor(private router: Router) {
@@ -132,9 +133,9 @@ export class SignupComponent implements OnInit {
           // return this.setState({ ipfsHash: result[0].hash })
           console.log('ifpsHash', r);
         });
-        this.simpleStorageInstance.getUserByAddress.call('0xeC872E4dD61e00B9Bd7858eEcB72d8910922Dbd0').then((user) => {
-          console.log(user);
-        });
+        // this.simpleStorageInstance.getUserByAddress.call('0xeC872E4dD61e00B9Bd7858eEcB72d8910922Dbd0').then((user) => {
+        //   console.log(user);
+        // });
       });
     });
   }

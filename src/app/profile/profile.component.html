@@ -20,7 +20,9 @@
         </div>
         <div class="info-container">
           <div class="avatar">
-            <img alt="" src="https://scontent.fcmb1-1.fna.fbcdn.net/v/t1.0-9/23722397_1550259995057403_3446315717979825141_n.jpg?_nc_cat=101&_nc_ht=scontent.fcmb1-1.fna&oh=7124b0a27e6642c8d89850a2041d3ea8&oe=5CE43F4A">
+            <img alt="" [src]="user.profileImage">
+          <button class="change-profilepic-btn"><i class="fa fa-edit "></i></button>
+            <input type="file" id="editprofileImage" (change)="changeProfileImage($event)">
           </div>
           <div class="info">
             <div class="title">
@@ -29,6 +31,7 @@
             <div class="desc">{{user.email}}</div>
             <div class="desc">{{user.description}}</div>
             <div class="desc">{{user.phone}}</div>
+            <div class="desc" *ngIf="isChanged" (click)="updateUserData()"><button>update</button></div>
           </div>
         </div>
         <div class="add-post">

@@ -547,14 +547,11 @@
 }
 .next-btn{
   border: 1px solid;
-  /*margin-left: 253px;*/
-  /*margin-top: 20px;*/
   color: #4cbf00;
-  width: 50px;
-  margin-left: 247px;
+  /* width: 50px; */
+  margin-left: 39%;
+  /* margin: 0 auto; */
   margin-top: 14px;
-  /*text-align: center;*/
-  /*margin:0 auto;*/
 }
 
 .next-btn:hover{
