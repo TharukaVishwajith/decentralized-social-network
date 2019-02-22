@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4722d5f-fb9b-46fe-ba08-09aab66c2483" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/ConvertLib.json" afterPath="$PROJECT_DIR$/build/contracts/ConvertLib.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/MetaCoin.json" afterPath="$PROJECT_DIR$/build/contracts/MetaCoin.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/SEToken.json" afterPath="$PROJECT_DIR$/build/contracts/SEToken.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/contracts/SimpleStorage.json" afterPath="$PROJECT_DIR$/build/contracts/SimpleStorage.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/SimpleStorage.sol" afterPath="$PROJECT_DIR$/contracts/SimpleStorage.sol" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/profile/profile.component.html" afterPath="$PROJECT_DIR$/src/app/profile/profile.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/signup/signup.component.ts" afterPath="$PROJECT_DIR$/src/app/signup/signup.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,13 +17,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="profile.component.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+            <state relative-caret-position="205">
+              <caret line="74" column="68" lean-forward="false" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
               <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3431#3438#1" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,8 +36,8 @@
       <file leaf-file-name="profile.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="257" column="61" lean-forward="false" selection-start-line="257" selection-start-column="61" selection-end-line="257" selection-end-column="61" />
+            <state relative-caret-position="212">
+              <caret line="326" column="18" lean-forward="false" selection-start-line="326" selection-start-column="9" selection-end-line="326" selection-end-column="18" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -72,21 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.component.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/signup/signup.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="553" column="19" lean-forward="false" selection-start-line="553" selection-start-column="19" selection-end-line="553" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleStorage.sol" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleStorage.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contracts/SimpleStorage.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="60" column="43" lean-forward="false" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+            <state relative-caret-position="293">
+              <caret line="96" column="1" lean-forward="true" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -95,8 +82,8 @@
       <file leaf-file-name="profile.component.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7259">
-              <caret line="427" column="14" lean-forward="false" selection-start-line="427" selection-start-column="14" selection-end-line="427" selection-end-column="14" />
+            <state relative-caret-position="279">
+              <caret line="437" column="22" lean-forward="true" selection-start-line="437" selection-start-column="2" selection-end-line="437" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -133,10 +120,16 @@
       <find>publicAddress</find>
       <find>userService</find>
       <find>.next-b</find>
-      <find>user</find>
       <find>_friendsCount</find>
-      <find>userIpfsHash</find>
       <find>friends</find>
+      <find>userIpfsHash</find>
+      <find>searchTxt</find>
+      <find>searchResult</find>
+      <find>user[</find>
+      <find>user</find>
+      <find>'../../</find>
+      <find>avatar</find>
+      <find>loadUsers</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,15 +144,15 @@
         <option value="$PROJECT_DIR$/src/app/signup/signup.component.html" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/user.service.ts" />
         <option value="$PROJECT_DIR$/src/app/signup/signup.component.css" />
-        <option value="$PROJECT_DIR$/src/app/profile/profile.component.css" />
         <option value="$PROJECT_DIR$/src/app/signup/signup.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/profile/profile.component.html" />
-        <option value="$PROJECT_DIR$/src/app/profile/profile.component.ts" />
         <option value="$PROJECT_DIR$/contracts/SimpleStorage.sol" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/app/profile/profile.component.css" />
+        <option value="$PROJECT_DIR$/src/app/profile/profile.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/profile/profile.component.html" />
       </list>
     </option>
   </component>
@@ -220,6 +213,20 @@
               <item name="AngulerTruffle" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AngulerTruffle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AngulerTruffle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AngulerTruffle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AngulerTruffle" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="signup" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AngulerTruffle" type="b2602c69:ProjectViewProjectNode" />
@@ -287,7 +294,7 @@
       <workItem from="1550509522161" duration="598000" />
       <workItem from="1550550544959" duration="22315000" />
       <workItem from="1550747852557" duration="12391000" />
-      <workItem from="1550805457217" duration="17210000" />
+      <workItem from="1550805457217" duration="33069000" />
     </task>
     <task id="LOCAL-00001" summary="added profile page">
       <created>1549734797837</created>
@@ -359,24 +366,39 @@
       <option name="project" value="LOCAL" />
       <updated>1550759649706</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added friends">
+      <created>1550825599102</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550825599102</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added seach user ui">
+      <created>1550836668024</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1550836668024</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121597000" />
+    <option name="totallyTimeSpent" value="137456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4820296" sideWeight="0.62291664" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23817034" sideWeight="0.1647145" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26498422" sideWeight="0.1647145" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23817034" sideWeight="0.8352855" order="7" side_tool="false" content_ui="tabs" x="205" y="522" width="822" height="200" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26498422" sideWeight="0.8352855" order="7" side_tool="false" content_ui="tabs" x="205" y="522" width="822" height="200" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -405,21 +427,15 @@
     <MESSAGE value="added create post" />
     <MESSAGE value="format code" />
     <MESSAGE value="added update profile image" />
-    <option name="LAST_COMMIT_MESSAGE" value="added update profile image" />
+    <MESSAGE value="added friends" />
+    <MESSAGE value="added seach user ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="added seach user ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6307">
-          <caret line="371" column="15" lean-forward="false" selection-start-line="371" selection-start-column="15" selection-end-line="371" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/meta/meta-sender/meta-sender.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2618">
@@ -516,7 +532,11 @@
         <state relative-caret-position="595">
           <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
           <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3431#3438#1" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -644,13 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/testcoin/testcoin.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -669,13 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/signup/signup.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -698,6 +704,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="1520" column="20" lean-forward="false" selection-start-line="1520" selection-start-column="20" selection-end-line="1520" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -731,14 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7259">
-          <caret line="427" column="14" lean-forward="false" selection-start-line="427" selection-start-column="14" selection-end-line="427" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/user.service.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -756,6 +755,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/signup/signup.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="553" column="19" lean-forward="false" selection-start-line="553" selection-start-column="19" selection-end-line="553" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/signup/signup.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="109" lean-forward="true" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/signup/signup.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="657">
@@ -766,39 +789,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/signup/signup.component.css">
+    <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="553" column="19" lean-forward="false" selection-start-line="553" selection-start-column="19" selection-end-line="553" selection-end-column="19" />
+        <state relative-caret-position="279">
+          <caret line="437" column="22" lean-forward="true" selection-start-line="437" selection-start-column="2" selection-end-line="437" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.html">
+    <entry file="file://$PROJECT_DIR$/truffle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/SimpleStorage.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="96" column="1" lean-forward="true" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="257" column="61" lean-forward="false" selection-start-line="257" selection-start-column="61" selection-end-line="257" selection-end-column="61" />
+        <state relative-caret-position="212">
+          <caret line="326" column="18" lean-forward="false" selection-start-line="326" selection-start-column="9" selection-end-line="326" selection-end-column="18" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/SimpleStorage.sol">
+    <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="60" column="43" lean-forward="false" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="205">
+          <caret line="74" column="68" lean-forward="false" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3431#3438#1" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
