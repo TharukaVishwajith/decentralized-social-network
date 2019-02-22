@@ -27,6 +27,8 @@ contract SimpleStorage {
 
   mapping(uint256 => User) public users;
 
+  mapping(uint => address) public userAddressList;
+
   mapping(uint => Post) public posts;
     // Store Candidates Count
     uint public candidatesCount;
@@ -41,6 +43,7 @@ contract SimpleStorage {
 
   function addNewUser(string memory _userIpfsHash, uint256 _address) public{
     userCount ++;
+    userAddressList[userCount] = msg.sender;
     users[_address] = User(userCount, _userIpfsHash , 0, '');
 //    users[_address] = User(userCount, _userIpfsHash , _friends);
   }
