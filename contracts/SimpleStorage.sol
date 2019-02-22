@@ -4,11 +4,14 @@ contract SimpleStorage {
 
 //  uint256 masterAddress = 0x7CacEE641aa61292c6035906384811186B5F3A2D;
 
+
   string ipfsHash;
   // Model a Candidate
   struct User {
       uint id;
       string userIpfsHash;
+      uint friendsCount;
+      string friends;
   }
 
   struct Post{
@@ -38,20 +41,24 @@ contract SimpleStorage {
 
   function addNewUser(string memory _userIpfsHash, uint256 _address) public{
     userCount ++;
-    users[_address] = User(userCount, _userIpfsHash);
+    users[_address] = User(userCount, _userIpfsHash , 0, '');
+//    users[_address] = User(userCount, _userIpfsHash , _friends);
   }
 
   function updateUser(string memory _userIpfsHash, uint256 _address) public{
-    users[_address] = User(userCount, _userIpfsHash);
+    User storage  u = users[_address];
+//    users[_address] = User(userCount, _userIpfsHash, u.friendsCount, u.friends);
+    u.userIpfsHash = _userIpfsHash;
+//    users[_address] = User(userCount, _userIpfsHash, u.friends);
   }
 
-  function getUserByAddress(uint256 _address) public returns (uint id, string memory userIpfsHash) {
+  function getUserByAddress(uint256 _address) public returns (uint id, string memory userIpfsHash, string memory friends) {
     // copy the data into memory
     User memory u = users[_address];
 
     // break the struct's members out into a tuple
     // in the same order that they appear in the struct
-    return (u.id, u.userIpfsHash);
+    return (u.id, u.userIpfsHash, u.friends);
   }
 
 
@@ -63,4 +70,25 @@ contract SimpleStorage {
 //  function getMasterAddress() public returns (uint256 masterAddress){
 //    return masterAddress;
 //  }
+
+  function addFriend(uint256 _address, string memory _friend) public{
+    User storage  u = users[_address];
+//    f.push(_friend);
+    u.friendsCount++;
+    u.friends =  concat(u.friends,';');
+    u.friends =  concat(u.friends,_friend);
+//    users[_address] = User(userCount, u.userIpfsHash, u.friendsCount, u.friends);
+//    users[_address] = User(userCount, u.userIpfsHash, u.friends);
+  }
+
+  function concat(string memory _a, string memory _b)private view returns (string memory) {
+    bytes memory bytes_a = bytes(_a);
+    bytes memory bytes_b = bytes(_b);
+    string memory length_ab = new string(bytes_a.length + bytes_b.length);
+    bytes memory bytes_c = bytes(length_ab);
+    uint k = 0;
+    for (uint i = 0; i < bytes_a.length; i++) bytes_c[k++] = bytes_a[i];
+    for (uint i = 0; i < bytes_b.length; i++) bytes_c[k++] = bytes_b[i];
+    return string(bytes_c);
+  }
 }

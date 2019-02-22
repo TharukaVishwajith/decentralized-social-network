@@ -131,6 +131,7 @@ export class SignupComponent implements OnInit {
         console.log(accounts);
         this.simpleStorageInstance.addNewUser(ipfsResult.hash, accounts[0], { from: accounts[0] }).then((r) => {
           // return this.setState({ ipfsHash: result[0].hash })
+          this.router.navigate(['/profile']);
           console.log('ifpsHash', r);
         });
         // this.simpleStorageInstance.getUserByAddress.call('0xeC872E4dD61e00B9Bd7858eEcB72d8910922Dbd0').then((user) => {
