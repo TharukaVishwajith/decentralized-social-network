@@ -80,7 +80,10 @@
               <div class="row my-search-results">
               <div class="col-md-2"> <img  class="search-result-profile-image" src="{{result.profileImageHash}}"></div>
               <div class="col-md-7" (click)="selectUserProfile(i)"><p class="search-result-profile-name">{{result.name}}</p></div>
-              <div class="col-md-3" ><button class="btn btn-success send-request-btn">Send Request</button></div>
+              <div class="col-md-3" >
+                <button class="btn btn-success send-request-btn" *ngIf="result.isFriend" (click)="addFriends(result.address)">Send Request</button>
+                <button class="btn btn-danger send-request-btn" *ngIf="!result.isFriend">Unfriend</button>
+              </div>
               </div>
             </div>
           </div>

@@ -74,12 +74,12 @@ contract SimpleStorage {
 //    return masterAddress;
 //  }
 
-  function addFriend(uint256 _address, string memory _friend) public{
+  function addFriend(uint256 _address, string memory _friends) public{
     User storage  u = users[_address];
 //    f.push(_friend);
     u.friendsCount++;
-    u.friends =  concat(u.friends,';');
-    u.friends =  concat(u.friends,_friend);
+//    u.friends =  concat(u.friends,';');
+    u.friends = _friends;
 //    users[_address] = User(userCount, u.userIpfsHash, u.friendsCount, u.friends);
 //    users[_address] = User(userCount, u.userIpfsHash, u.friends);
   }
