@@ -58,12 +58,45 @@
       </div>
     </div>
   </div>
-  <!--<div *ngIf="showResultModel">-->
-    <!--<div *ngFor="let result of searchResult">-->
-      <!--<p>{{result.name}}</p>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<button (click)="addFriends()">Test button</button>-->
+
+  <div *ngIf="activeTab === 'FRIEND'">
+    <div *ngFor="let friend of  friends"  class="post-card">
+      <div>
+        <img class="post-card-img" src="https://ipfs.io/ipfs/{{post_.file}}" alt="Avatar">
+      </div>
+      <div class="post-card-container">
+        <h4><b>{{friend.name}}</b></h4>
+        <!--<h4><b>Jane Doe</b></h4>-->
+        <p>{{post_.date.toLocaleDateString()}} {{post_.date.toLocaleTimeString()}} </p>
+        <p>{{post_.content}}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="container">
     <div class="modal fade" id="myModal" role="dialog">
@@ -81,8 +114,8 @@
               <div class="col-md-2"> <img  class="search-result-profile-image" src="{{result.profileImageHash}}"></div>
               <div class="col-md-7" (click)="selectUserProfile(i)"><p class="search-result-profile-name">{{result.name}}</p></div>
               <div class="col-md-3" >
-                <button class="btn btn-success send-request-btn" *ngIf="result.isFriend" (click)="addFriends(result.address)">Send Request</button>
-                <button class="btn btn-danger send-request-btn" *ngIf="!result.isFriend" (click)="unfriend(result.address)">Unfriend</button>
+                <button class="btn btn-success send-request-btn" *ngIf="!result.isFriend" (click)="addFriends(result.address)">Send Request</button>
+                <button class="btn btn-danger send-request-btn" *ngIf="result.isFriend" (click)="unfriend(result.address)">Unfriend</button>
               </div>
               </div>
             </div>
