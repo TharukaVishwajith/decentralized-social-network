@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4722d5f-fb9b-46fe-ba08-09aab66c2483" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/profile/profile.component.html" afterPath="$PROJECT_DIR$/src/app/profile/profile.component.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,8 +35,8 @@
       <file leaf-file-name="profile.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="296" column="9" lean-forward="true" selection-start-line="296" selection-start-column="9" selection-end-line="296" selection-end-column="9" />
+            <state relative-caret-position="194">
+              <caret line="283" column="113" lean-forward="false" selection-start-line="283" selection-start-column="113" selection-end-line="283" selection-end-column="113" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -297,7 +296,7 @@
       <workItem from="1550550544959" duration="22315000" />
       <workItem from="1550747852557" duration="12391000" />
       <workItem from="1550805457217" duration="39405000" />
-      <workItem from="1550899616609" duration="7620000" />
+      <workItem from="1550899616609" duration="7781000" />
     </task>
     <task id="LOCAL-00001" summary="added profile page">
       <created>1549734797837</created>
@@ -397,11 +396,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550936110226</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added unfriend functionality">
+      <created>1550936411806</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1550936411806</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151412000" />
+    <option name="totallyTimeSpent" value="151573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -448,7 +454,8 @@
     <MESSAGE value="added seach user ui" />
     <MESSAGE value=" search user ui improvment" />
     <MESSAGE value="add friend ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="add friend ui" />
+    <MESSAGE value="added unfriend functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="added unfriend functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -843,8 +850,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="296" column="9" lean-forward="true" selection-start-line="296" selection-start-column="9" selection-end-line="296" selection-end-column="9" />
+        <state relative-caret-position="194">
+          <caret line="283" column="113" lean-forward="false" selection-start-line="283" selection-start-column="113" selection-end-line="283" selection-end-column="113" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
